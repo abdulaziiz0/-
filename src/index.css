@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  :root, html, body {
+    color-scheme: light;
+    --color-emerald-deep: #0B3D2E;
+    --color-forest-dark: #082B23;
+    --color-jade: #147D64;
+    --color-gold: #C7A45B;
+    --color-ivory: #F7F4EC;
+    --color-text-primary: #18231F;
+    --color-text-secondary: #5A6B63;
+    --color-border: #E3E7DF;
+  }
+
+  body {
+    background-color: #F7F4EC;
+    color: #18231F;
+    font-family: 'IBM Plex Sans Arabic', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  [dir="ltr"] body {
+    font-family: 'Inter', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-quran {
+  font-family: 'Amiri', 'Traditional Arabic', 'Scheherazade New', serif;
+  line-height: 2.2;
+}
+
+.font-arabic {
+  font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-english {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Subtle Islamic geometric star pattern background for Hero and accent cards */
+.bg-islamic-pattern {
+  background-color: #082B23;
+  background-image: radial-gradient(rgba(199, 164, 91, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(20, 125, 100, 0.15) 1px, #082B23 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+.bg-islamic-stars {
+  background-color: #0B3D2E;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C7A45B' fill-opacity='0.07' fill-rule='evenodd'%3E%3Cpath d='M30 18 L33 27 L42 30 L33 33 L30 42 L27 33 L18 30 L27 27 Z M30 22 L32 28 L38 30 L32 32 L30 38 L28 32 L22 30 L28 28 Z'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='60' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='60' r='1.5'/%3E%3Ccircle cx='60' cy='60' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-ivory-pattern {
+  background-color: #F7F4EC;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23147D64' fill-opacity='0.03'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F0EFEA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD2C9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A1ACA0;
+}
+
+/* Standardized Button utility classes reflecting MIJHAR brand palette */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0B3D2E;
+  color: #FFFFFF;
+  border: 1px solid #0B3D2E;
+  font-weight: 600;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #147D64;
+  border-color: #147D64;
+}
+.btn-primary:active {
+  background-color: #082B23;
+  border-color: #082B23;
+  transform: scale(0.98);
+}
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #F7F4EC, 0 0 0 4px #147D64;
+}
+.btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  color: #082B23;
+  border: 1px solid #E3E7DF;
+  font-weight: 600;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #F7F4EC;
+  border-color: rgba(20, 125, 100, 0.5);
+  color: #0B3D2E;
+}
+.btn-secondary:active {
+  background-color: #EDE8DC;
+  border-color: rgba(20, 125, 100, 0.7);
+  transform: scale(0.98);
+}
+.btn-secondary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #F7F4EC, 0 0 0 4px #147D64;
+}
+.btn-secondary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
